@@ -10,6 +10,8 @@ import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public SharedPreferences predata;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,13 +23,15 @@ public class LoginActivity extends AppCompatActivity {
         Button btnReg = (Button)findViewById(R.id.btnRegis);
         Button btnLog = (Button)findViewById(R.id.btnLogin);
 
+        predata = getSharedPreferences("datapreferance", MODE_PRIVATE);
+
         btnLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String user = et1.getText().toString();
                 String pass = et2.getText().toString();
 
-                SharedPreferences preferences = getSharedPreferences("MYPREFS", MODE_PRIVATE);
+                SharedPreferences preferences = predata;
 
                 String details = preferences.getString(user + pass + "data", "Username or password is Incorrect.");
                 SharedPreferences.Editor editor = preferences.edit();

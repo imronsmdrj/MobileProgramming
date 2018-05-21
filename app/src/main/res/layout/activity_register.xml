@@ -34,12 +34,53 @@
         android:hint="password"/>
 
     <Button
+        android:id="@+id/btnReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnReg"
         android:layout_below="@id/etPass"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:text="Register"/>
+        android:onClick="alibaba"
+        android:text="Register" />
+
+    <Button
+        android:id="@+id/btnshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:onClick="tampilData"
+        android:text="muncul" />
+
+    <Button
+        android:id="@+id/kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:onClick="backtologin"
+        android:text="Back To Login" />
+
+    <TextView
+        android:id="@+id/TVUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"/>
+
+    <TextView
+        android:id="@+id/TVPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"/>
 
 </RelativeLayout>
